@@ -1,0 +1,42 @@
+	Sat Apr  9 23:56 2016 Time and Allocation Profiling Report  (Final)
+
+	   Main +RTS -p -RTS
+
+	total time  =        0.00 secs   (0 ticks @ 1000 us, 1 processor)
+	total alloc =     324,856 bytes  (excludes profiling overheads)
+
+COST CENTRE  MODULE           %time %alloc
+
+CAF          GHC.IO.Handle.FD   0.0   15.9
+main         Main               0.0   10.8
+deal.x'      Main               0.0    2.1
+deal'        Main               0.0    3.0
+deal'.result Main               0.0    5.0
+deal'.params Main               0.0   45.6
+test         Main               0.0    3.0
+combinations Main               0.0    3.7
+origs        Main               0.0    8.0
+
+
+                                                              individual     inherited
+COST CENTRE         MODULE                  no.     entries  %time %alloc   %time %alloc
+
+MAIN                MAIN                     49           0    0.0    0.1     0.0  100.0
+ CAF                Main                     97           0    0.0    0.1     0.0   82.1
+  main              Main                     98           1    0.0   10.8     0.0   82.0
+   deal             Main                     99           1    0.0    0.2     0.0   71.2
+    deal.x'         Main                    101           1    0.0    2.1     0.0    2.1
+    deal'           Main                    100           8    0.0    3.0     0.0   69.0
+     deal'.params   Main                    104           7    0.0   45.6     0.0   45.6
+     deal'.result   Main                    102           7    0.0    5.0     0.0   20.4
+      test          Main                    103           7    0.0    3.0     0.0   15.4
+       test.ps      Main                    107           7    0.0    0.0     0.0    8.4
+        p           Main                    108           7    0.0    0.3     0.0    8.4
+         origs      Main                    109          52    0.0    8.0     0.0    8.0
+       test.f       Main                    106           7    0.0    0.3     0.0    0.3
+       combinations Main                    105          51    0.0    3.7     0.0    3.7
+ CAF                GHC.Conc.Signal          93           0    0.0    0.2     0.0    0.2
+ CAF                GHC.IO.Encoding          87           0    0.0    0.9     0.0    0.9
+ CAF                GHC.IO.Encoding.Iconv    85           0    0.0    0.1     0.0    0.1
+ CAF                GHC.IO.Handle.FD         77           0    0.0   15.9     0.0   15.9
+ CAF                Text.Read.Lex            66           0    0.0    0.7     0.0    0.7
